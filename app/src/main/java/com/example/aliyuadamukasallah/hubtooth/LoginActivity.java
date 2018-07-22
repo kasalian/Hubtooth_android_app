@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         forgetPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s = "Enter the master password in ONLY the User Name field or contact the developer";
+                String s = "Enter the master password in ONLY the User Name Field or Contact the Developer";
                 Toast.makeText(getApplicationContext(), s ,Toast.LENGTH_LONG).show();
 
                 userName.setText("");
