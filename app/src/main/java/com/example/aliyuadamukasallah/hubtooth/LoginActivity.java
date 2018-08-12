@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
         login = (Button) findViewById(R.id.login);
         forgetPass = (Button) findViewById(R.id.forgetPassword);
 
-        display = (TextView) findViewById(R.id.display_error);
 
         userName = (EditText) findViewById(R.id.userName);
         password = (EditText) findViewById(R.id.password);
@@ -37,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                 user = userName.getText().toString().toLowerCase();
                 pass = password.getText().toString().toLowerCase();
 
-                if ((user.equals("kasalian") && pass.equals("lara")) || (user.equals("masterbluetooth") && pass.equals("") )){
+                if ((user.equals("home") && pass.equals("tooth")) || (user.equals("bluetooth") && pass.equals("") )){
                     Intent i = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(i);
 
@@ -46,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
 //                    user = pass = "";
 
                 }else {
-                    display.setText("Invalid Login details !!!");
+                    Toast.makeText(LoginActivity.this,"Invalid Login Details", Toast.LENGTH_LONG).show();
                     userName.setText("");
                     password.setText("");
                     user = pass = "";
